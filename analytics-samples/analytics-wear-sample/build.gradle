@@ -1,16 +1,23 @@
 apply plugin: 'com.android.application'
-apply plugin: 'com.f2prateek.javafmt'
 
 apply from: rootProject.file('gradle/android.gradle')
 
 android {
-  defaultConfig {
-    minSdkVersion rootProject.ext.minSdkVersionWear
-  }
+	defaultConfig {
+		minSdkVersion rootProject.ext.minSdkVersionWear
+	}
+
+	lintOptions {
+		// Since this is just a sample app, it's ok to ignore these warnings.
+		disable 'IconMissingDensityFolder', 'GoogleAppIndexingWarning', 'AllowBackup'
+	}
 }
 
 dependencies {
-  compile project(':analytics')
-  compile project(':analytics-wear')
-  compile 'com.google.android.support:wearable:1.1.0'
+	implementation project(':analytics')
+	implementation project(':analytics-wear')
+	implementation 'androidx.wear:wear:1.0.0'
+}
+repositories {
+	mavenCentral()
 }

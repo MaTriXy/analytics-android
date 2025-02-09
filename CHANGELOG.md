@@ -1,6 +1,171 @@
 Changelog
 =========
 
+Version 4.11.3 (May 16, 2023)
+============================
+* [Fix](https://github.com/segmentio/analytics-android/pull/836): fix DisplayMetrics crash on android 11+
+
+Version 4.11.2 (May 16, 2023)
+============================
+* [Fix](https://github.com/segmentio/analytics-android/pull/832): fix WindowManager crash on android 11+
+
+Version 4.11.1 (Mar 13, 2023)
+============================
+* [Fix](https://github.com/segmentio/analytics-android/pull/824): fix androidx lifecycle causes analytics init in background crash
+
+Version 4.11.0 (Jan 6, 2023)
+============================
+* [New](https://github.com/segmentio/analytics-android/pull/817): move writeKey from http request header to payload body
+
+Version 4.10.4 (Feb 17, 2022)
+============================
+* [Fix](https://github.com/segmentio/analytics-android/pull/791): fix ANR issue caused by MediaDRM api
+
+Version 4.10.3 (Jan 25, 2022)
+============================
+* [New](https://github.com/segmentio/analytics-android/pull/786): deprecate jcenter and bintray
+
+Version 4.10.2 (Jan 18, 2022)
+============================
+* [New](https://github.com/segmentio/analytics-android/pull/784): fix get unique id NPE
+
+Version 4.10.1 (Jan 11, 2022)
+============================
+* [New](https://github.com/segmentio/analytics-android/pull/781): Address violation of retrieving unsettable device
+* [New](https://github.com/segmentio/analytics-android/pull/774): update kotlin docs to beta
+
+Version 4.10.0 (July 8, 2021)
+============================
+* [New](https://github.com/segmentio/analytics-android/pull/769): Add referrer property when tracking Deep Link Opened
+
+Version 4.9.4 (May 3, 2021)
+============================
+* [Fix](https://github.com/segmentio/analytics-android/pull/761): Map product_id for a Product
+* [Fix](https://github.com/segmentio/analytics-android/pull/767): Safely handle bad URIs when tracking deep links
+
+Version 4.9.3 (Mar 29, 2021)
+============================
+* [Fix](https://github.com/segmentio/analytics-android/pull/755): Check Float NaN and Infinity
+* [Fix](https://github.com/segmentio/analytics-android/pull/758): Fix Incorrect Timestamps
+
+Version 4.9.2 (Mar 22, 2021)
+============================
+* [New](https://github.com/segmentio/analytics-android/pull/734): Make new lifecycle methods opt-out
+* [New](https://github.com/segmentio/analytics-android/pull/731): Kotlin Demo App
+* [New](https://github.com/segmentio/analytics-android/pull/739): Custom apiHost for Segment.IO and support multi-regional Segment
+* [Fix](https://github.com/segmentio/analytics-android/pull/750): Add NonNull annotations to params for analytics constructor
+* [Fix](https://github.com/segmentio/analytics-android/pull/749): Retry hasPermission in case of failure due to package manager being inactive
+* [Fix](https://github.com/segmentio/analytics-android/pull/752): Marshal NaN and other special numbers to 0.0 and not produce malformed JSON
+
+Version 4.9.0 (Oct 15, 2020)
+============================
+* [New](https://github.com/segmentio/analytics-android/pull/707): Remove the ability to natively report attribution information via Segment integrations
+* [New](https://github.com/segmentio/analytics-android/pull/727): Edge Function Support
+* [New](https://github.com/segmentio/analytics-android/pull/715): Add a Webhook Integration for viewing payloads
+* [New](https://github.com/segmentio/analytics-android/pull/728): Enable faster project settings refresh when debugging enabled
+
+Version 4.8.2 (Jul 30, 2020)
+============================
+* [Fix](https://github.com/segmentio/analytics-android/pull/686): Generate timestamps at call site rather than asynchronously
+
+Version 4.8.0 (Jul 13, 2020)
+============================
+
+* [Fix](https://github.com/segmentio/analytics-android/pull/668): Fix: Proguard/R8 configuration for createValueMap
+* [Fix](https://github.com/segmentio/analytics-android/pull/670): handle RuntimeException when calling `getActivityInfo`
+* [New](https://github.com/segmentio/analytics-android/pull/671): Experimental Nanosecond timestamps
+
+Version 4.7.1 (Jun 8, 2020)
+============================
+
+* [Fix](https://github.com/segmentio/analytics-android/pull/667): Use AndroidX lifecycle functions for App Fore/Backgrounded
+* [Fix](https://github.com/segmentio/analytics-android/pull/666): Fix alias not overridden by cached value
+* [Fix](https://github.com/segmentio/analytics-android/pull/663): Catch null intent data
+
+Version 4.7.0 (Jun 1, 2020)
+============================
+
+* [New](https://github.com/segmentio/analytics-android/pull/655): Add type to device context
+* [Fix](https://github.com/segmentio/analytics-android/pull/665): Prevent Global Context modification for one-time op
+* [New](https://github.com/segmentio/analytics-android/pull/664): Add support for Destination Middleware
+
+Version 4.6.0 (May 21, 2020)
+============================
+
+* [New](https://github.com/segmentio/analytics-android/pull/662): Add DefaultProjectSettings in Analytics.Builder
+* [Fix](https://github.com/segmentio/analytics-android/pull/659): Test coverage fix after previous merge to master
+* [New](https://github.com/segmentio/analytics-android/pull/658): Update project to AndroidX
+* [Fix](https://github.com/segmentio/analytics-android/pull/656): Set build property to String
+
+Version 4.5.0 (Apr 22, 2020)
+============================
+
+* Promoting 4.5.x to stable release.  This includes all changes since 4.3.1.
+* [Fix](https://github.com/fubotv/segment-analytics-android/pull/1): Check integration settings for null
+
+Version 4.5.0-beta.2 (Mar 23, 2020)
+===================================
+
+ * [New](https://github.com/segmentio/analytics-android/pull/632): Make crypto abstract methods public
+ * [Fix](https://github.com/segmentio/analytics-android/pull/648): Preserve BUILD and VERSION keys on reset() calls
+ * [Fix](https://github.com/segmentio/analytics-android/pull/646): Resolves ArrayIndexOutOfBoundsException crash (#586)
+ * [Fix](https://github.com/segmentio/analytics-android/pull/644): Updated documentation on deep copy and threading
+ * [Fix](https://github.com/segmentio/analytics-android/pull/642): Double check that input stream is closed
+
+Version 4.5.0-beta.1 (Dec 16, 2019)
+===================================
+
+ * [New](https://github.com/segmentio/analytics-android/pull/637): Track "Deep Link Opened" on activity creation
+ 
+Version 4.5.0-beta.0 (July 25, 2019)
+===================================
+
+ * [New](https://github.com/segmentio/analytics-android/pull/620): Add Application Open and Application Backgrounded Events
+
+Version 4.4.0-beta1 (Nov 28, 2018)
+==================================
+
+ * [Fix](https://github.com/segmentio/analytics-android/pull/574): Send application build number as a string to match our documentation and other libraries. If you were relying on this field being a number, you may need to update reports that rely on the now deprecated behaviour. You can also override this behaviour and keep the deprecated behaviour by supplying the `build` field manually.
+
+ ```java
+ PackageManager packageManager = context.getPackageManager();
+ PackageInfo packageInfo = packageManager.getPackageInfo(context.getPackageName(), 0);
+ Map<String, Object> app = new LinkedHashMap<>();
+
+ // Put the build as an integer instead of string.
+ app.put("build", packageInfo.versionCode);
+
+ // Put other application context fields that the library collects. Not shown in this example, but you should filter out any null fields.
+ app.put("name", packageInfo.applicationInfo.loadLabel(packageManager));
+ app.put("version", packageInfo.versionName);
+ app.put("namespace", packageInfo.packageName);
+
+ analytics.getAnalyticsContext().put("app", app);
+ ```
+
+ * [New](https://github.com/segmentio/analytics-android/pull/595): Add `Options#putContext` method. This allows you to send context fields for a single event. This can also override default context fields for a single event.
+
+ ```java
+ analytics.track("My Event", properties, new Options().putContext("custom_context_field", true));
+ ```
+
+ * [New](https://github.com/segmentio/analytics-android/pull/582): Send a custom user agent on HTTP requests originating the library. The new user-agent will be formatted as `analytics-android/{version}`.
+
+ * [Fix](https://github.com/segmentio/analytics-android/pull/578): Retry network requests when server responds with a HTTP 429 response code.
+
+ * [Fix](https://github.com/segmentio/analytics-android/pull/575): Update maximum message limit to be 32kb to match our API limits.
+
+ * [Fix](https://github.com/segmentio/analytics-android/pull/573): Fix race condition that could cause events to pick up user IDs after the event was originally recorded.
+
+Version 4.3.1 (Nov 28, 2017)
+=============================
+
+ * [Fix](https://github.com/segmentio/analytics-android/pull/547): Rename `Properties#putSubtotal` helper to `Properties#subtotal`.
+ * [New](https://github.com/segmentio/analytics-android/pull/550): Send disabled events to Segment's API so that it can be surfaced in the debugger. These events will not be sent to any destination.
+ * [New](https://github.com/segmentio/analytics-android/pull/552): Add support for schema defaults.
+ * [Fix](https://github.com/segmentio/analytics-android/pull/537): Show better errors for unexpected 3xx response codes.
+
+
 Version 4.3.0 (Oct 2nd, 2017)
 =============================
 
